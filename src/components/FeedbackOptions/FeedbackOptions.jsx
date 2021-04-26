@@ -1,13 +1,17 @@
 import React from 'react';
-import Section_title from '../Section/Section_title'
+import SectionTitle from '../Section/Section_title'
+import css from './FeedbackOptions.module.css'
 
 const FeedbackOptions  = ({good, neutral, bad}) => {
   return (
-   <Section_title title="Please, leave feedback">
-      <button type='button' onClick={good}>Good</button>
-        <button type='button' onClick={neutral}>Neutral</button>
-        <button type='button' onClick={bad}>Bad</button>
-      </Section_title>  
+    
+    <SectionTitle className={css.FeedbackOptions} title="Please, leave your feedback">
+      <div className={css.buttonBlock}>
+      <button type='button' className={css.bItem} onClick={good}>Good</button>
+        <button type='button' className={css.bItem} onClick={neutral}>Neutral</button>
+        <button type='button' className={css.bItem} onClick={bad}>Bad</button>
+        </div>
+      </SectionTitle>  
       // </div>
   );
 };

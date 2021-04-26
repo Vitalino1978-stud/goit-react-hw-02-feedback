@@ -1,12 +1,13 @@
 
 import React, { Component } from 'react';
-import FeedbackOptions from './components/FeedbackOptions'
+import FeedbackOptions from './components/FeedbackOptions';
+// import Statistics from './components/Statistics';
 
 class App extends Component {
   state = {
-  good: 2,
-  neutral: 5,
-  bad: 7
+  good: 0,
+  neutral: 0,
+  bad: 0
   }
 
   addGood = () => {
@@ -37,6 +38,7 @@ class App extends Component {
     const { good, neutral, bad } = this.state;
     const total = good + neutral + bad;
     return total;
+
   }
 
   countPositiveFeedbackPercentage = () => {
@@ -45,25 +47,47 @@ class App extends Component {
     return percentage;
 
   }
-
+  
   render() {
     const { good, neutral, bad } = this.state;
-    return (
+    const total = good + neutral + bad;
+    if (total !== 0) {
+      return (
       <>
-        <FeedbackOptions good={this.addGood}/>
+        <FeedbackOptions
+          good={this.addGood}
+          neutral={this.addNeutral}
+          bad={this.addBad} />
       
-        <div>
+        <div className="Statistcs">
           <h2>Statistics</h2>
           <ul>
-            <li>Good{ good}</li>
-            <li>Neutral{ neutral}</li>
-            <li>Bad{ bad}</li>
+            <li className="Statistic_item">Good{ good}</li>
+            <li className="Statistic_item">Neutral{ neutral}</li>
+            <li className="Statistic_item">Bad{ bad}</li>
           </ul>
           <h3>Total:{ this.countTotalFeedback() }</h3>
           <h3>Positive feedback:{ this.countPositiveFeedbackPercentage() }%</h3>
         </div>
         </>
     );
+      
+    }
+    return (
+      <>
+    <FeedbackOptions
+          good={this.addGood}
+          neutral={this.addNeutral}
+          bad={this.addBad} />
+      
+        <div className="Statistcs">
+          <h2>Statistics</h2>
+          <p>No feedback given yet...</p>
+          
+        </div>
+        
+      </>
+    )
   }
 }
 

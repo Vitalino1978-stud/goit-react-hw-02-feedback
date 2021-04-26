@@ -1,0 +1,19 @@
+
+.FeedbackOptions {
+  padding: 20px;
+  margin: 10px;
+  width: 400px;
+  background-color: #fff;
+  
+}
+.buttonBlock {
+text-align: center;
+ margin: 0 auto;
+ 
+}
+
+.bItem {
+  margin-top: 15px;
+ justify-content: space-between;
+ margin-right: 15px;
+}

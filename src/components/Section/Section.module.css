@@ -1,0 +1,13 @@
+.Section {
+  padding: 20px;
+  margin: 10px;
+  width: 400px;
+  background-color: #fff;
+  /* border-radius: 10px; */
+  
+}
+
+.Section > h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}

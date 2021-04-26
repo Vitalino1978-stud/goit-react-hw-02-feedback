@@ -1,0 +1,18 @@
+.Statistics {
+  padding: 20px;
+  margin: 10px;
+  width: 400px;
+  background-color: #fff;
+}
+.Statistics > h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.Statistic_list {
+  list-style: none;
+  
+}
+
+.Statistic_item {
+  margin-top: 10px;
+}
