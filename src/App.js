@@ -9,6 +9,7 @@ class App extends Component {
   neutral: 0,
   bad: 0
   }
+  
 
   addGood = () => {
     this.setState(prevState => {

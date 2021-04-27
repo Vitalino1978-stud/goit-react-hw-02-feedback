@@ -1,7 +1,7 @@
 import React from 'react';
 import css from './Section.module.css'
 
-const Section_title  = ({children, title}) => {
+const SectionTitle  = ({children, title}) => {
   return (
     <section className={css.Section}>
       {title && <h2>{title}</h2>}
@@ -10,4 +10,4 @@ const Section_title  = ({children, title}) => {
   );
 };
 
-export default Section_title;
+export default SectionTitle;
